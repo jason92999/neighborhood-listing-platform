@@ -14,10 +14,9 @@
 
 ## Step 5: App Shell Architect
 
-- **AI Model / Tool:** Gemini 3.8 Flash (Google AI Studio)
-- **Prompt Title:** App Shell Architect
-- **Prompt:** "Act as a senior teaching assistant. Propose a minimal Next.js App Router + TypeScript + Tailwind starter for a neighborhood property platform. Give a file plan, terminal commands, accessibility requirements (accessible HTML, semantic landmarks, focus states), and a verification checklist. Never invent command results or credentials."
-- **Key Takeaways:** 
-  - Reviewed standard App Router project architecture (`src/app/`, `src/components/`, `src/types/`).
-  - Identified accessibility rules: skip navigation links, semantic landmarks (`<main>`, `<article>`), explicit focus indicators, and WCAG 2.1 AA contrast requirements.
-  - Received verification checklist covering `npx tsc --noEmit`, `npm run lint`, and keyboard navigation testing.
+- AI Model / Tool: Gemini 3.8 Flash (Google AI Studio)
+-
+- Prompt: "Act as a senior teaching assistant. Propose a minimal Next.js App Router + TypeScript + Tailwind starter for a neighborhood property platform. Give a file plan, terminal commands, accessibility requirements (accessible HTML, semantic landmarks, focus states), and a verification checklist. Never invent command results or credentials."
+- Notes: 
+  - Got folder structure (`src/app`, `src/components`, `src/types`).
+  - Got basic setup commands and basic accessibility rules.
