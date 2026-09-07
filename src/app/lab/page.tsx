@@ -1,0 +1,1 @@
+export default function LabPage() { return (<main className="p-8"><h1 className="text-2xl font-bold">Neighborhood Property Listing - Lab Space</h1><p className="mt-2 text-gray-600">Lab environment successfully initialized.</p></main>); }
