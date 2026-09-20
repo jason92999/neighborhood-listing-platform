@@ -24,7 +24,7 @@
         </div>
 
         <div className="border rounded-xl p-6 bg-white shadow-sm hover:shadow-md transition">
-          <h2 className="text-xl font-bold text-purple-600 mb-2">3. Voice Help</h2>
+          <h2 className="text-xl font-bold text-purple-600 mb-2">3. AI Voice Help</h2>
           <p className="text-gray-600 text-sm">
             Interact with AI-driven voice assistance to navigate listings and answer property questions.
           </p>
