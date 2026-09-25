@@ -34,5 +34,6 @@ Review: Gemini suggested several properties. I removed features that were not ne
 - **Passed Audits:** 23/24 automated checks passed 
 - **Manual Keyboard Audit:** Passed. Able to navigate the entire page using only Tab, Shift+Tab, Enter, and Space.
 
-### Identified Issues
+### Identified Issues and fix
 - **Issue:** Heading elements are not in a sequentially-descending order.
+- **Fix:** Changed heading tag in `SponsorBanner.tsx` to `<h2>` to maintain strict sequential heading hierarchy (`<h1>` $\rightarrow$ `<h2>`).
