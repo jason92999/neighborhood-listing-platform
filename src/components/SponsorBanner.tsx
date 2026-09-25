@@ -8,9 +8,9 @@ export const SponsorBanner: React.FC<{ sponsor: Sponsor }> = ({ sponsor }) => {
         <span className="text-xs font-bold uppercase tracking-wider text-amber-800 bg-amber-200 px-2.5 py-0.5 rounded">
           Sponsored
         </span>
-        <h4 className="text-lg font-bold text-gray-900 mt-2">
+        <h2 className="text-lg font-bold text-gray-900 mt-2">
           {sponsor.businessName}
-        </h4>
+        </h2>
         <p className="text-sm text-gray-700 mt-1">
           {sponsor.description}
         </p>
