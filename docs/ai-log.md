@@ -20,3 +20,20 @@
 - Notes: 
   - Got folder structure (`src/app`, `src/components`, `src/types`).
   - Got basic setup commands and basic accessibility rules.
+
+# LAB 2 STEP 2
+AI Tool: Google AI Studio (Gemini)
+Prompt: Give me only the TypeScript prop interfaces for PropertyCard, SponsorBanner, and SearchFilters for a neighborhood property listing website. No component code.
+
+Review: Gemini suggested several properties. I removed features that were not needed for Lab 2, such as favorites, sharing, and impressions.
+
+### STEP 9 AND 10
+## Lab 2 - Accessibility Audit
+
+- **Lighthouse Accessibility Score:** 98/100
+- **Passed Audits:** 23/24 automated checks passed 
+- **Manual Keyboard Audit:** Passed. Able to navigate the entire page using only Tab, Shift+Tab, Enter, and Space.
+
+### Identified Issues and fix
+- **Issue:** Heading elements are not in a sequentially-descending order.
+- **Fix:** Changed heading tag in `SponsorBanner.tsx` to `<h2>` to maintain strict sequential heading hierarchy (`<h1>` $\rightarrow$ `<h2>`).
