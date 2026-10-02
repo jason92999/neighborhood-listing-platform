@@ -37,3 +37,46 @@ Review: Gemini suggested several properties. I removed features that were not ne
 ### Identified Issues and fix
 - **Issue:** Heading elements are not in a sequentially-descending order.
 - **Fix:** Changed heading tag in `SponsorBanner.tsx` to `<h2>` to maintain strict sequential heading hierarchy (`<h1>` $\rightarrow$ `<h2>`).
+
+
+## LAB 3 STEP 1
+### Property Card
+
+* Property ID
+* Address/city
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Image
+* Amenities
+
+### Detail Page
+
+* Property ID
+* Full address
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Amenities
+* Description
+* Local sponsors
+
+### Sponsor Selection
+
+* Sponsor ID
+* Sponsor name
+* Sponsor category
+* Associated property ID
+
+### Voice Response
+
+* Property address/city
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Key amenities
+* Sponsor information
+
