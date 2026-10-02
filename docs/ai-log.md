@@ -80,3 +80,55 @@ Review: Gemini suggested several properties. I removed features that were not ne
 * Key amenities
 * Sponsor information
 
+## LAB 3 STEP 2
+### Property
+
+Represents a property listing.
+
+**Primary Key:** `property_id`
+
+Fields:
+
+* `property_id`
+* `address`
+* `city`
+* `state`
+* `zip_code`
+* `price`
+* `bedrooms`
+* `bathrooms`
+* `square_feet`
+* `amenities`
+
+### Sponsor
+
+Represents a local business or sponsor.
+
+**Primary Key:** `sponsor_id`
+
+Fields:
+
+* `sponsor_id`
+* `name`
+* `category`
+
+### PropertySponsor
+
+Connects properties with sponsors.
+
+**Primary Key:** Composite key of `property_id` and `sponsor_id`
+
+Fields:
+
+* `property_id`
+* `sponsor_id`
+
+### Relationships
+
+* One Property can be associated with many PropertySponsor records.
+* One Sponsor can be associated with many PropertySponsor records.
+* PropertySponsor creates a many-to-many relationship between Property and Sponsor.
+* `property_id` in PropertySponsor is a foreign key referencing Property.
+* `sponsor_id` in PropertySponsor is a foreign key referencing Sponsor.
+
+
