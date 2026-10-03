@@ -166,5 +166,12 @@ I decided to keep amenities as an array of controlled strings.
 
 This keeps the project simple and makes the data more consistent.
 
+**### AI Collaboration Checkpoint**
 
+- **Useful output:** Both ChatGPT and Gemini identified the amenities array as a normalization issue and suggested controlled values.
 
+- **Rejected output:** A separate Amenity and PropertyAmenity table was not used because it would add more complexity to this project.
+
+- **Verification:** Zod validation and the Step 11 tests were used to check valid and invalid property data.
+
+- **Commit:** `dc8b06b docs: add Lab 3 Step 12 AI notes`
