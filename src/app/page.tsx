@@ -1,7 +1,8 @@
 ﻿import PropertyCard from '@/components/PropertyCard';
 import { SponsorBanner } from '@/components/SponsorBanner';
 import { SearchFilters } from '@/components/SearchFilters';
-import { sampleProperties, sampleSponsor } from '@/data/properties';
+import properties from '@/data/generated/properties-valid.json';
+import { sampleSponsor } from '@/data/properties';
 
 export default function Home() {
   return (
@@ -11,14 +12,14 @@ export default function Home() {
       </h1>
 
       <SearchFilters />
-      
+
       <SponsorBanner sponsor={sampleSponsor} />
 
       <section aria-label="Property Listings">
         <h2 className="sr-only">Properties</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {sampleProperties.map((property) => (
-            <PropertyCard key={property.id} property={property} />
+          {properties.map((property) => (
+            <PropertyCard key={property.property_id} property={property} />
           ))}
         </div>
       </section>

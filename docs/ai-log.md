@@ -37,3 +37,141 @@ Review: Gemini suggested several properties. I removed features that were not ne
 ### Identified Issues and fix
 - **Issue:** Heading elements are not in a sequentially-descending order.
 - **Fix:** Changed heading tag in `SponsorBanner.tsx` to `<h2>` to maintain strict sequential heading hierarchy (`<h1>` $\rightarrow$ `<h2>`).
+
+
+## LAB 3 STEP 1
+### Property Card
+
+* Property ID
+* Address/city
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Image
+* Amenities
+
+### Detail Page
+
+* Property ID
+* Full address
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Amenities
+* Description
+* Local sponsors
+
+### Sponsor Selection
+
+* Sponsor ID
+* Sponsor name
+* Sponsor category
+* Associated property ID
+
+### Voice Response
+
+* Property address/city
+* Price
+* Bedrooms
+* Bathrooms
+* Square feet
+* Key amenities
+* Sponsor information
+
+## LAB 3 STEP 2
+### Property
+
+Represents a property listing.
+
+**Primary Key:** `property_id`
+
+Fields:
+
+* `property_id`
+* `address`
+* `city`
+* `state`
+* `zip_code`
+* `price`
+* `bedrooms`
+* `bathrooms`
+* `square_feet`
+* `amenities`
+
+### Sponsor
+
+Represents a local business or sponsor.
+
+**Primary Key:** `sponsor_id`
+
+Fields:
+
+* `sponsor_id`
+* `name`
+* `category`
+
+### PropertySponsor
+
+Connects properties with sponsors.
+
+**Primary Key:** Composite key of `property_id` and `sponsor_id`
+
+Fields:
+
+* `property_id`
+* `sponsor_id`
+
+### Relationships
+
+* One Property can be associated with many PropertySponsor records.
+* One Sponsor can be associated with many PropertySponsor records.
+* PropertySponsor creates a many-to-many relationship between Property and Sponsor.
+* `property_id` in PropertySponsor is a foreign key referencing Property.
+* `sponsor_id` in PropertySponsor is a foreign key referencing Sponsor.
+
+## LAB 3 STEP 8
+
+* First output had errors.
+* I improved the Gemini prompt.
+* Gemini generated new data.
+* The validator passed the new data.
+
+## LAB 3 STEP 9
+
+* I created TypeScript types based on the JSON Schema.
+* Zod is used to validate the data.
+* TypeScript types are used for type safety.
+
+## LAB 3 STEP 12
+
+### Prompt Used
+
+Review my property listing data model for normalization.
+
+I have Property, Sponsor, and PropertySponsor. Property also has an amenities array.
+
+Are there any normalization problems? Should amenities stay as free text, use controlled values, or use a separate table? Explain which option is best for this project and why.
+
+### ChatGPT vs Gemini
+
+Both ChatGPT and Gemini said that using an array for amenities can cause normalization problems.
+
+Both suggested using controlled values to keep the data consistent.
+
+### Decision
+
+I decided to keep amenities as an array of controlled strings.
+
+This keeps the project simple and makes the data more consistent.
+
+**### AI Collaboration Checkpoint**
+
+- **Useful output:** Both ChatGPT and Gemini identified the amenities array as a normalization issue and suggested controlled values.
+
+- **Rejected output:** A separate Amenity and PropertyAmenity table was not used because it would add more complexity to this project.
+
+- **Verification:** Zod validation and the Step 11 tests were used to check valid and invalid property data.
+
+- **Commit:** `dc8b06b docs: add Lab 3 Step 12 AI notes`

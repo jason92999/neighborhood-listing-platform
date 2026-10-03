@@ -1,0 +1,197 @@
+[
+{
+"property_id": "PROP-CA-1001",
+"listing_title": "Whispering Pines Modern Haven",
+"property_type": "Single Family Residence",
+"status": "Active",
+"price_usd": 1350000,
+"bedrooms": 4,
+"bathrooms": 3.5,
+"square_feet": 2850,
+"year_built": 2021,
+"address": {
+"street": "742 Solano Crest Way",
+"neighborhood": "Crestview Hills",
+"city": "Oakland",
+"state": "CA",
+"zip_code": "94611"
+},
+"amenities": [
+"Rooftop solar panel array",
+"Drought-tolerant xeriscape garden",
+"Heated saltwater lap pool",
+"Level 2 EV charging station",
+"Temperature-controlled wine room"
+],
+"local_sponsors": [
+{
+"sponsor_id": "SPON-01A",
+"business_name": "Bay Breeze Artisan Bakery",
+"category": "Food & Beverage",
+"promotional_offer": "Complimentary weekly pastry basket for first three months of residency"
+},
+{
+"sponsor_id": "SPON-01B",
+"business_name": "Redwood Valley Landscaping Co.",
+"category": "Home Services",
+"promotional_offer": "25% discount on seasonal native garden maintenance"
+}
+]
+},
+{
+"property_id": "PROP-CA-1002",
+"listing_title": "The Mariposa Coastal Loft",
+"property_type": "Condominium",
+"status": "Active",
+"price_usd": 785000,
+"bedrooms": 2,
+"bathrooms": 2.0,
+"square_feet": 1240,
+"year_built": 2018,
+"address": {
+"street": "188 Ocean Vista Terrace, Unit 4B",
+"neighborhood": "Pelican Point",
+"city": "Long Beach",
+"state": "CA",
+"zip_code": "90802"
+},
+"amenities": [
+"Floor-to-ceiling Pacific Ocean views",
+"Private wrap-around corner balcony",
+"Community rooftop barbecue pavilion",
+"Secured underground tandem parking",
+"Smart-lock building access system"
+],
+"local_sponsors": [
+{
+"sponsor_id": "SPON-02A",
+"business_name": "Anchor & Bean Roastery",
+"category": "Cafe & Eatery",
+"promotional_offer": "Free one-year cold brew coffee club membership"
+},
+{
+"sponsor_id": "SPON-02B",
+"business_name": "Pacific Coast Paddle Hub",
+"category": "Recreation & Fitness",
+"promotional_offer": "Buy-one-get-one weekend kayak and paddleboard rentals"
+}
+]
+},
+{
+"property_id": "PROP-CA-1003",
+"listing_title": "Valencia Citrus Grove Villa",
+"property_type": "Spanish Revival Estate",
+"status": "Pending",
+"price_usd": 1895000,
+"bedrooms": 5,
+"bathrooms": 4.0,
+"square_feet": 3600,
+"year_built": 1938,
+"address": {
+"street": "4309 Camino Del Sol",
+"neighborhood": "Arroyo Heights",
+"city": "Pasadena",
+"state": "CA",
+"zip_code": "91105"
+},
+"amenities": [
+"Restored terracotta fountain courtyard",
+"Detached casita guest suite",
+"Outdoor kitchen with wood-fired pizza oven",
+"Historic Valencia orange orchard grove",
+"Hand-painted Spanish Talavera tile accents"
+],
+"local_sponsors": [
+{
+"sponsor_id": "SPON-03A",
+"business_name": "Mission Bell Floral Atelier",
+"category": "Retail",
+"promotional_offer": "Handcrafted housewarming floral centerpiece delivery"
+},
+{
+"sponsor_id": "SPON-03B",
+"business_name": "Crown City Heritage Restorations",
+"category": "Architectural Consulting",
+"promotional_offer": "Complimentary historical masonry and wood preservation assessment"
+}
+]
+},
+{
+"property_id": "PROP-CA-1004",
+"listing_title": "Shadow Mountain Desert Sanctuary",
+"property_type": "Mid-Century Modern Single Family",
+"status": "Active",
+"price_usd": 1120000,
+"bedrooms": 3,
+"bathrooms": 3.0,
+"square_feet": 2150,
+"year_built": 1964,
+"address": {
+"street": "882 Ocotillo Ridge Road",
+"neighborhood": "Sunfire Canyon",
+"city": "Palm Springs",
+"state": "CA",
+"zip_code": "92264"
+},
+"amenities": [
+"Clerestory windows with mountain panoramas",
+"Sunken conversational concrete fire pit",
+"Polished white terrazzo flooring throughout",
+"Geometric desert plunge pool with Baja shelf",
+"Breeze-block privacy courtyard entry"
+],
+"local_sponsors": [
+{
+"sponsor_id": "SPON-04A",
+"business_name": "Mirage Modern Vintage Goods",
+"category": "Interior Design",
+"promotional_offer": "200 credit toward authentic mid-century lighting restoration"
+},
+{
+"sponsor_id": "SPON-04B",
+"business_name": "Cactus Bloom Botanical Nursery",
+"category": "Gardening",
+"promotional_offer": "Two complimentary specimen golden barrel cacti with installation"
+}
+]
+},
+{
+"property_id": "PROP-CA-1005",
+"listing_title": "Sierra Foothills Craftsman Lodge",
+"property_type": "Craftsman Bungalow",
+"status": "Active",
+"price_usd": 945000,
+"bedrooms": 4,
+"bathrooms": 2.5,
+"square_feet": 2620,
+"year_built": 2012,
+"address": {
+"street": "1205 Gold Rush Meadow Court",
+"neighborhood": "Timberline Creek",
+"city": "Auburn",
+"state": "CA",
+"zip_code": "95603"
+},
+"amenities": [
+"Covered wrap-around cedar front porch",
+"Floor-to-ceiling river rock hearth fireplace",
+"Dedicated woodworking workshop outbuilding",
+"Dual-tank rainwater harvesting filtration system",
+"Private gateway to regional canyon hiking trails"
+],
+"local_sponsors": [
+{
+"sponsor_id": "SPON-05A",
+"business_name": "Pine Needle Mercantile & Hardware",
+"category": "Home Improvement",
+"promotional_offer": "150 gift card for homesteading and trail gear"
+},
+{
+"sponsor_id": "SPON-05B",
+"business_name": "Bear Valley Organics Co-op",
+"category": "Grocery",
+"promotional_offer": "Six-month community supported agriculture farm box membership"
+}
+]
+}
+]
