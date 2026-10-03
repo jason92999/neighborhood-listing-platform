@@ -1,0 +1,147 @@
+[
+  {
+    "property_id": "PROP-001",
+    "address": "742 Solano Crest Way",
+    "city": "Oakland",
+    "state": "CA",
+    "zip_code": "94611",
+    "price": 1350000,
+    "bedrooms": 4,
+    "bathrooms": 3.5,
+    "square_feet": 2850,
+    "amenities": [
+      "Solar panel array",
+      "Drought-tolerant garden",
+      "Heated lap pool",
+      "EV charging station"
+    ],
+    "local_sponsors": [
+      {
+        "sponsor_id": "SPON-101",
+        "name": "Bay Breeze Artisan Bakery",
+        "category": "Food & Beverage"
+      },
+      {
+        "sponsor_id": "SPON-102",
+        "name": "Redwood Valley Landscaping Co.",
+        "category": "Home Services"
+      }
+    ]
+  },
+  {
+    "property_id": "PROP-002",
+    "address": "188 Ocean Vista Terrace, Unit 4B",
+    "city": "Long Beach",
+    "state": "CA",
+    "zip_code": "90802",
+    "price": 785000,
+    "bedrooms": 2,
+    "bathrooms": 2.0,
+    "square_feet": 1240,
+    "amenities": [
+      "Ocean view balcony",
+      "Rooftop barbecue lounge",
+      "Secured underground parking",
+      "Smart thermostat"
+    ],
+    "local_sponsors": [
+      {
+        "sponsor_id": "SPON-201",
+        "name": "Anchor & Bean Roastery",
+        "category": "Cafe"
+      },
+      {
+        "sponsor_id": "SPON-202",
+        "name": "Pacific Coast Paddle Hub",
+        "category": "Recreation"
+      }
+    ]
+  },
+  {
+    "property_id": "PROP-003",
+    "address": "4309 Camino Del Sol",
+    "city": "Pasadena",
+    "state": "CA",
+    "zip_code": "91105",
+    "price": 1895000,
+    "bedrooms": 5,
+    "bathrooms": 4.0,
+    "square_feet": 3600,
+    "amenities": [
+      "Courtyard fountain",
+      "Outdoor pizza oven",
+      "Detached guest casita",
+      "Heritage citrus grove"
+    ],
+    "local_sponsors": [
+      {
+        "sponsor_id": "SPON-301",
+        "name": "Mission Bell Floral Atelier",
+        "category": "Retail"
+      },
+      {
+        "sponsor_id": "SPON-302",
+        "name": "Crown City Heritage Restorations",
+        "category": "Architectural Consulting"
+      }
+    ]
+  },
+  {
+    "property_id": "PROP-004",
+    "address": "882 Ocotillo Ridge Road",
+    "city": "Palm Springs",
+    "state": "CA",
+    "zip_code": "92264",
+    "price": 1120000,
+    "bedrooms": 3,
+    "bathrooms": 3.0,
+    "square_feet": 2150,
+    "amenities": [
+      "Mountain view terrace",
+      "Sunken concrete fire pit",
+      "Polished terrazzo flooring",
+      "Desert plunge pool"
+    ],
+    "local_sponsors": [
+      {
+        "sponsor_id": "SPON-401",
+        "name": "Mirage Modern Vintage Goods",
+        "category": "Interior Design"
+      },
+      {
+        "sponsor_id": "SPON-402",
+        "name": "Cactus Bloom Botanical Nursery",
+        "category": "Gardening"
+      }
+    ]
+  },
+  {
+    "property_id": "PROP-005",
+    "address": "1205 Gold Rush Meadow Court",
+    "city": "Auburn",
+    "state": "CA",
+    "zip_code": "95603",
+    "price": 945000,
+    "bedrooms": 4,
+    "bathrooms": 2.5,
+    "square_feet": 2620,
+    "amenities": [
+      "Wrap-around porch",
+      "River rock fireplace",
+      "Detached woodworking workshop",
+      "Rainwater harvesting system"
+    ],
+    "local_sponsors": [
+      {
+        "sponsor_id": "SPON-501",
+        "name": "Pine Needle Mercantile",
+        "category": "Home Improvement"
+      },
+      {
+        "sponsor_id": "SPON-502",
+        "name": "Bear Valley Organics Co-op",
+        "category": "Grocery"
+      }
+    ]
+  }
+]
