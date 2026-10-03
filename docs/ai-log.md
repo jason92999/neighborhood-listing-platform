@@ -131,4 +131,12 @@ Fields:
 * `property_id` in PropertySponsor is a foreign key referencing Property.
 * `sponsor_id` in PropertySponsor is a foreign key referencing Sponsor.
 
+## LAB 3 STEP 8
+
+* First output had errors.
+* I improved the Gemini prompt.
+* Gemini generated new data.
+* The validator passed the new data.
+
+
 
