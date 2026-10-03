@@ -144,5 +144,27 @@ Fields:
 * Zod is used to validate the data.
 * TypeScript types are used for type safety.
 
+## LAB 3 STEP 12
+
+### Prompt Used
+
+Review my property listing data model for normalization.
+
+I have Property, Sponsor, and PropertySponsor. Property also has an amenities array.
+
+Are there any normalization problems? Should amenities stay as free text, use controlled values, or use a separate table? Explain which option is best for this project and why.
+
+### ChatGPT vs Gemini
+
+Both ChatGPT and Gemini said that using an array for amenities can cause normalization problems.
+
+Both suggested using controlled values to keep the data consistent.
+
+### Decision
+
+I decided to keep amenities as an array of controlled strings.
+
+This keeps the project simple and makes the data more consistent.
+
 
 
