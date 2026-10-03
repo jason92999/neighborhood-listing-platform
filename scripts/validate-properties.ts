@@ -23,7 +23,7 @@ local_sponsors: z.array(sponsorSchema),
 })
 .strict();
 
-const filePath = "src/data/generated/properties-raw.json";
+const filePath = "src/data/generated/properties-valid.json";
 
 const rawData = fs.readFileSync(filePath, "utf-8");
 const data = JSON.parse(rawData);
