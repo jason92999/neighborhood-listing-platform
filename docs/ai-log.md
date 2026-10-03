@@ -138,5 +138,11 @@ Fields:
 * Gemini generated new data.
 * The validator passed the new data.
 
+## LAB 3 STEP 9
+
+* I created TypeScript types based on the JSON Schema.
+* Zod is used to validate the data.
+* TypeScript types are used for type safety.
+
 
 
