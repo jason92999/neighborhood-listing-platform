@@ -50,11 +50,9 @@ const tests = [
   },
   {
     name: "Missing property_id",
-    data: (() => {
-      const copy = { ...validProperty };
-      delete (copy as any).property_id;
-      return copy;
-    })(),
+    data: Object.fromEntries(
+      Object.entries(validProperty).filter(([key]) => key !== "property_id")
+    ),
     shouldPass: false,
   },
   {
