@@ -176,6 +176,10 @@ This keeps the project simple and makes the data more consistent.
 
 - **Commit:** `dc8b06b docs: add Lab 3 Step 12 AI notes`
 
+
+## midterm
 | Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | Part 1 / ChatGPT | Set up the exam branch and update `.gitignore`. | Created the `exam/services-booking-eval` branch and added `/dist/` to `.gitignore`. | No rejected output. | Checked the branch name, Git status, and commit history. | `3d73b06` |
+| Part 2 / ChatGPT | Create the exam requirements document with three user stories, Given/When/Then acceptance criteria, scope estimates, and technical mappings. | Created `docs/requirements.md` with Merchant, Client, and Admin user stories and mapped them to the required technical parts. | No major output rejected. | Reviewed the requirements document and checked that all three user stories and required sections were included. | `396278b`, `a7cbe79` |
+| Part 3 / ChatGPT | Create the Supabase SQL migration with the five required tables, fields, relationships, defaults, and constraints. | Created `supabase/migrations/20261029140000_exam_services_persistence.sql` with the required database schema. | Avoided adding extra tables or columns outside the exam requirements. | Reviewed the SQL migration, ran it in Supabase SQL Editor, and confirmed that all five tables appeared in Table Editor. | `a7cbe79` |
