@@ -17,7 +17,7 @@ export const SponsorBanner: React.FC<{ sponsor: Sponsor }> = ({ sponsor }) => {
       </div>
       
       <a
-        href={sponsor.linkUrl}
+        href="/sponsor"
         target="_blank"
         rel="noopener noreferrer"
         className="text-sm font-semibold text-blue-600 underline hover:text-blue-800 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500"
