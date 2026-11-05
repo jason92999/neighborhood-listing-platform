@@ -183,3 +183,18 @@ This keeps the project simple and makes the data more consistent.
 | Part 1 / ChatGPT | Set up the exam branch and update `.gitignore`. | Created the `exam/services-booking-eval` branch and added `/dist/` to `.gitignore`. | No rejected output. | Checked the branch name, Git status, and commit history. | `3d73b06` |
 | Part 2 / ChatGPT | Create the exam requirements document with three user stories, Given/When/Then acceptance criteria, scope estimates, and technical mappings. | Created `docs/requirements.md` with Merchant, Client, and Admin user stories and mapped them to the required technical parts. | No major output rejected. | Reviewed the requirements document and checked that all three user stories and required sections were included. | `396278b`, `a7cbe79` |
 | Part 3 / ChatGPT | Create the Supabase SQL migration with the five required tables, fields, relationships, defaults, and constraints. | Created `supabase/migrations/20261029140000_exam_services_persistence.sql` with the required database schema. | Avoided adding extra tables or columns outside the exam requirements. | Reviewed the SQL migration, ran it in Supabase SQL Editor, and confirmed that all five tables appeared in Table Editor. | `a7cbe79` |
+
+## Part 4: Services API, Security, and Components
+
+| Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Part 4 / ChatGPT | Review the Supabase RLS policies and identify security issues. | Updated public SELECT policies to include anonymous and authenticated users. Replaced unrestricted booking INSERT policy with a restriction allowing bookings only for approved services. | Unrestricted booking submissions were rejected because they allowed bookings for unapproved services. | Queried `pg_policies` in Supabase and verified the updated policies and existing provider restrictions. | Pending |
+| Part 4 / ChatGPT | Review and update the security audit documentation. | Updated `docs/security-audit.md` to match the actual database policies and distinguish expected results from completed runtime tests. | Did not claim that all authorization tests had passed because runtime testing is still required. | Compared the documentation against the policies returned by Supabase. | Pending |
+| Part 4 / ChatGPT | Create the required ServiceCard component. | Created `src/components/ServiceCard.tsx` using the existing service database fields: title, hourly rate, duration, and coverage radius. | Did not add a booking button because a booking route has not been implemented. | Reviewed the component code and ran the production build successfully. | Pending |
+
+### AI Collaboration Checkpoint
+
+- **Useful output:** ChatGPT helped identify an unrestricted booking policy and recommended restricting booking submissions to approved services.
+- **Rejected output:** No booking interface or additional database fields were added beyond the available implementation.
+- **Verification:** Supabase policy definitions were inspected, and `npm.cmd run build` completed successfully.
+- **Remaining work:** Runtime authorization testing and final Git commit/push.
