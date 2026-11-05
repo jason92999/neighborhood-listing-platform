@@ -1,5 +1,6 @@
 ﻿import { SponsorBanner } from '@/components/SponsorBanner';
 import PropertyListings from '@/components/PropertyListings';
+import ServicesCatalog from '@/components/ServicesCatalog';
 import properties from '@/data/generated/properties-valid.json';
 import { sampleSponsor } from '@/data/properties';
 
@@ -13,6 +14,8 @@ export default function Home() {
       <SponsorBanner sponsor={sampleSponsor} />
 
       <PropertyListings properties={properties} />
+
+      <ServicesCatalog />
     </main>
   );
 }
