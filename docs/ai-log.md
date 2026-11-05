@@ -198,3 +198,5 @@ This keeps the project simple and makes the data more consistent.
 - **Rejected output:** No booking interface or additional database fields were added beyond the available implementation.
 - **Verification:** Supabase policy definitions were inspected, and `npm.cmd run build` completed successfully.
 - **Remaining work:** Runtime authorization testing and final Git commit/push.
+
+| Part 4 / ChatGPT | Create and integrate a responsive services catalog using the existing services API. | Created `ServicesCatalog.tsx`, connected it to the home page, and displayed approved services using a responsive 1/2/3-column grid. | Did not implement actual booking submission because a booking workflow is not yet connected. | Production build passed; verified approved services appeared in the browser and the Book Now alert worked. | Pending |
