@@ -184,19 +184,44 @@ This keeps the project simple and makes the data more consistent.
 | Part 2 / ChatGPT | Create the exam requirements document with three user stories, Given/When/Then acceptance criteria, scope estimates, and technical mappings. | Created `docs/requirements.md` with Merchant, Client, and Admin user stories and mapped them to the required technical parts. | No major output rejected. | Reviewed the requirements document and checked that all three user stories and required sections were included. | `396278b`, `a7cbe79` |
 | Part 3 / ChatGPT | Create the Supabase SQL migration with the five required tables, fields, relationships, defaults, and constraints. | Created `supabase/migrations/20261029140000_exam_services_persistence.sql` with the required database schema. | Avoided adding extra tables or columns outside the exam requirements. | Reviewed the SQL migration, ran it in Supabase SQL Editor, and confirmed that all five tables appeared in Table Editor. | `a7cbe79` |
 
-## Part 4: Services API, Security, and Components
+## Part 4: Security and Authorization
 
 | Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
 | :--- | :--- | :--- | :--- | :--- | :--- |
-| Part 4 / ChatGPT | Review the Supabase RLS policies and identify security issues. | Updated public SELECT policies to include anonymous and authenticated users. Replaced unrestricted booking INSERT policy with a restriction allowing bookings only for approved services. | Unrestricted booking submissions were rejected because they allowed bookings for unapproved services. | Queried `pg_policies` in Supabase and verified the updated policies and existing provider restrictions. | 4df57d4 |
-| Part 4 / ChatGPT | Review and update the security audit documentation. | Updated `docs/security-audit.md` to match the actual database policies and distinguish expected results from completed runtime tests. | Did not claim that all authorization tests had passed because runtime testing is still required. | Compared the documentation against the policies returned by Supabase. | 4df57d4 |
-| Part 4 / ChatGPT | Create the required ServiceCard component. | Created `src/components/ServiceCard.tsx` using the existing service database fields: title, hourly rate, duration, and coverage radius. | Did not add a booking button because a booking route has not been implemented. | Reviewed the component code and ran the production build successfully. | 4df57d4 |
+| Part 4 / ChatGPT | Review the Supabase RLS policies and identify security issues. | Updated public SELECT policies to include anonymous and authenticated users. Restricted booking INSERT policies to approved services. | Unrestricted booking submissions were rejected because they allowed bookings for unapproved services. | Queried `pg_policies` in Supabase and inspected the policy definitions. | `4df57d4` |
+| Part 4 / ChatGPT | Review and update the security audit documentation. | Updated `docs/security-audit.md` to document the RLS policies and authorization test results. | Avoided claiming that untested authorization scenarios had passed. | Compared the documentation with Supabase policy definitions and SQL transaction test results. | `4df57d4`, `15add6a` |
 
 ### AI Collaboration Checkpoint
 
 - **Useful output:** ChatGPT helped identify an unrestricted booking policy and recommended restricting booking submissions to approved services.
-- **Rejected output:** No booking interface or additional database fields were added beyond the available implementation.
-- **Verification:** Supabase policy definitions were inspected, and `npm.cmd run build` completed successfully.
-- **Remaining work:** Runtime authorization testing and final Git commit/push.
+- **Rejected output:** Unrestricted booking submissions were rejected because they could allow bookings for unapproved services.
+- **Verification:** Tested public service access, booking restrictions, provider access, client booking visibility, and elevated service-role access using SQL transactions. Temporary test records were rolled back.
+- **Commit:** `15add6a`
 
-| Part 4 / ChatGPT | Create and integrate a responsive services catalog using the existing services API. | Created `ServicesCatalog.tsx`, connected it to the home page, and displayed approved services using a responsive 1/2/3-column grid. | Did not implement actual booking submission because a booking workflow is not yet connected. | Production build passed; verified approved services appeared in the browser and the Book Now alert worked. | 958879b |
+## Part 5: Services API and Data Validation
+
+| Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Part 5 / ChatGPT | Implement the services API using Supabase and validate service data with Zod. | Created the service validation schema and server-side API routes. GET retrieves approved services, while POST validates input, authenticates the provider, and creates a draft service. | Client-side use of the service-role key was rejected because it would expose privileged database access. | Inspected the schema and API routes, tested the services listing, and ran `npm.cmd run build` successfully. | `07c0937` |
+
+### AI Collaboration Checkpoint
+
+- **Useful output:** ChatGPT helped implement server-side Supabase access, Zod validation, and the services GET/POST endpoints.
+- **Rejected output:** Exposing the service-role key in client-side code was rejected because it would compromise database security.
+- **Verification:** Confirmed that approved services could be retrieved and that the production build completed successfully.
+- **Commit:** `07c0937`
+
+## Part 6: Services UI and Accessibility
+
+| Step / Tool | Prompt Summary | Model Output Used | Model Output Rejected & Rationale | Verification Method | Associated Git Commit |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| Part 6 / ChatGPT | Create an accessible ServiceCard component for displaying service information. | Created `src/components/ServiceCard.tsx` with semantic HTML, service details, and an accessible Book Now button. | A complete booking submission workflow was not added because the booking interface is not connected to a booking API. | Reviewed the component and ran the production build successfully. | `4df57d4` |
+| Part 6 / ChatGPT | Create and integrate a responsive services catalog using the existing services API. | Created `ServicesCatalog.tsx`, connected it to the home page, and displayed approved services in a responsive one-, two-, and three-column grid. | Did not implement actual booking submission because a booking workflow is not connected. | Verified approved services appeared in the browser and tested the Book Now button. | `958879b` |
+| Part 6 / ChatGPT | Verify keyboard accessibility of the services interface. | Used the existing semantic controls and visible focus styling for keyboard navigation. | No additional keyboard interaction code was needed after testing the existing implementation. | Manually tested Tab, Shift+Tab, Enter, and Space. Confirmed the visible focus indicator. | `958879b` |
+
+### AI Collaboration Checkpoint
+
+- **Useful output:** ChatGPT helped build the responsive services catalog and accessible service cards.
+- **Rejected output:** A separate booking workflow was not added because the API does not implement booking submission.
+- **Verification:** Tested the live interface and keyboard navigation using Tab, Shift+Tab, Enter, and Space. The production build passed.
+- **Commit:** `958879b`
